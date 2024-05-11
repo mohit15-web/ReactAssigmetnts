@@ -6,6 +6,6 @@ import Carousel from './Carousel.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   // <React.StrictMode>
-    <Carousel />
+  <App/>
   // </React.StrictMode>,
 )
