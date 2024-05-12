@@ -13,7 +13,7 @@
   /* background-color: red; */
   height: 100vh;
   width: 100%;
-  background-image: url("C:\Users\91724\Desktop\notepad\src\assets\backgroundImage.jpg");
+  background-image: url("./assets/backgroundImage.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
