@@ -14,8 +14,27 @@ function Head() {
   const [markdown, setMarkdown] = useState("# Markdown Preview");
   const [write, setWrite] = useState(true);
   const handleIconClick = (markdownText) => {
-    setMarkdown((prevMarkdown) => prevMarkdown + markdownText);
+    setMarkdown(prevMarkdown => prevMarkdown + markdownText);
   };
+
+  
+const markdownTemp = `
+## Mohit
+
+A paragraph with *emphasis* and **strong importance**.
+
+> A block quote with ~strikethrough~ and a URL: https://reactjs.org.
+
+* Lists
+* [ ] todo
+* [x] done
+
+A table:
+
+| a | b |
+| - | - |
+`
+
 
   return (
     <div>
@@ -38,12 +57,15 @@ function Head() {
           <textarea
             className="w-full h-[80vh] bg-[#F8F9F8] p-3"
             value={markdown}
-            onChange={(e) => setMarkdown(e.target.value)}
+            onChange={(e) => {
+              setMarkdown(e.target.value)
+              console.log(e.target.value);
+            }}
           ></textarea>
         </div>
       ) : (
         <div className=" bg-[#F8F9F8] w-full h-[80vh] p-3">
-          <ReactMarkdown>{markdown}</ReactMarkdown>
+          <ReactMarkdown>{markdownTemp}</ReactMarkdown>
         </div>
       )}
     </div>
